@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="3.2.1" method="upgrade">
+    <name>com_productve</name>
+    <creationDate>2014-01-11</creationDate>
+    <copyright>Copyright (C) 2014. All rights reserved.</copyright>
+    <license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+    <author>MAciej</author>
+    <authorEmail>maciej.grochowski89@gmail.com</authorEmail>
+    <authorUrl>http://</authorUrl>
+    <version>1.0.0</version>
+    <description>Component to display and allow edit product in system</description>
+    
+    <install> <!-- Runs on install -->
+        <sql>
+            <file driver="mysql" charset="utf8">sql/install.mysql.utf8.sql</file>
+        </sql>
+    </install>
+    <uninstall> <!-- Runs on uninstall -->
+        <sql>
+            <file driver="mysql" charset="utf8">sql/uninstall.mysql.utf8.sql</file>
+        </sql>
+    </uninstall>
+
+    <files folder="site">
+        <filename>index.html</filename>
+        <filename>productve.php</filename>
+        <filename>controller.php</filename>
+        <filename>router.php</filename>
+        <folder>views</folder>
+        <folder>models</folder>
+        <folder>controllers</folder>
+        <folder>helpers</folder>
+    </files>
+    <languages folder="site">
+        
+			<language tag="en-AU">language/en-AU.com_productve.ini</language>
+			<language tag="en-GB">language/en-GB.com_productve.ini</language>
+    </languages>
+    <administration>
+        <menu img="components/com_productve/assets/images/s_com_productve.png" >COM_PRODUCTVE</menu>
+        <submenu>
+            
+			<menu link="option=com_productve&amp;view=productves" view="productves" img="components/com_productve/assets/images/s_productves.png" alt="Productve/Productves">COM_PRODUCTVE_TITLE_PRODUCTVES</menu>
+
+			<menu link="option=com_productve&amp;view=tablev1ews" view="tablev1ews" img="components/com_productve/assets/images/s_tablev1ews.png" alt="Productve/Tablev1ews">COM_PRODUCTVE_TITLE_TABLEV1EWS</menu>
+
+        </submenu>
+        <files folder="administrator">
+            <filename>access.xml</filename>
+            <filename>config.xml</filename>
+            <filename>controller.php</filename>
+            <filename>index.html</filename>
+            <filename>productve.php</filename>
+            <folder>controllers</folder>
+            <folder>assets</folder>
+            <folder>helpers</folder>
+            <folder>models</folder>
+            <folder>sql</folder>
+            <folder>tables</folder>
+            <folder>views</folder>
+        </files>
+        <languages folder="administrator">
+            
+			<language tag="en-AU">language/en-AU.com_productve.ini</language>
+			<language tag="en-AU">language/en-AU.com_productve.sys.ini</language>
+			<language tag="en-GB">language/en-GB.com_productve.ini</language>
+			<language tag="en-GB">language/en-GB.com_productve.sys.ini</language>
+        </languages>
+    </administration>
+</extension>
+<!-- Component built by the Joomla Component Creator -->
+<!-- http://www.notwebdesign.com/joomla-component-creator/ -->
